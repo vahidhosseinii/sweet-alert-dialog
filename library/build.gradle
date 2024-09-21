@@ -4,20 +4,23 @@ version = VERSION_NAME
 group = GROUP
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
+    namespace 'cn.pedant.SweetAlert'
+    compileSdk 34
     defaultConfig {
-        minSdkVersion 9
+        applicationId "cn.pedant.SweetAlert"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
     }
 
-    lintOptions {
+
+        lintOptions {
         abortOnError false
     }
 }
 
 dependencies {
-    compile 'com.pnikosis:materialish-progress:1.0'
+    implementation 'com.pnikosis:materialish-progress:1.7'
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

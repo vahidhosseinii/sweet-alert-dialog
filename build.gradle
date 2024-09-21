@@ -1,19 +1,22 @@
 buildscript {
+    ext {
+        agp_version = '8.2.1'
+        agp_version1 = '8.1.0'
+    }
     repositories {
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.14.1'
+        classpath "com.android.tools.build:gradle:$agp_version1"
     }
 }
 
-ext {
-    compileSdkVersion = 21
-    buildToolsVersion = "19.1.0"
-}
+
 
 allprojects {
     repositories {
         mavenCentral()
+        google()
     }
 }
